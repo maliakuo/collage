@@ -35,7 +35,7 @@ struct PageGallery: View {
                     PageGalleryItem(backgroundStyle: Color.cardFront) {
                         selectPage(page)
                     } label: {
-                        Text("page.elements[0].name")
+                        Text(page.elements[0].name)
                     }
                 }
             }
