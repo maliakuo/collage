@@ -48,13 +48,17 @@ extension CGPoint: Hashable {
 // creating a new class of elements
 @Model
 final class Element {
-    var name: String
+    var name: String = ""
+    var x: Double = 120
+    var y: Double = 120
 //    var position: CGPoint
-    var isActive: Bool
+    var isActive: Bool = false
     
-    init(name: String, isActive: Bool) {
+    init(name: String, x: Double, y: Double, isActive: Bool) {
         self.name = name
 //        self.position = position
+        self.x = x
+        self.y = y
         self.isActive = isActive
     }
 }
@@ -78,11 +82,15 @@ extension Element: Identifiable { }
 extension Element: Hashable {
     static func == (lhs: Element, rhs: Element) -> Bool {
         lhs.name == rhs.name &&
+        lhs.x == rhs.x &&
+        lhs.y == rhs.y &&
         lhs.isActive == rhs.isActive
     }
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
+        hasher.combine(x)
+        hasher.combine(y)
 //        hasher.combine(CGPoint)
         hasher.combine(isActive)
     }
@@ -114,7 +122,7 @@ extension Element: Hashable {
 @Model
 final class Page {
     var creationDate: Date
-    var elements: [Element] = []
+    var elements: [Element]
 
     init(creationDate: Date = .now, elements: [Element]) {
         self.creationDate = creationDate

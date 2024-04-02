@@ -26,6 +26,6 @@ import SwiftUI
 struct SampleDeck {
     static var contents: [Page] = [
 //        Page(elements: [Element(name: "hi", position: CGPoint(x: 300, y: 200), isActive: false)])
-        Page(elements: [Element(name: "hi", isActive: false)])
+        Page(elements: [Element(name: "hi", x: 120, y: 120, isActive: false)])
     ]
 }

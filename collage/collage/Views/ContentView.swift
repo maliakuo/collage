@@ -51,7 +51,7 @@ struct ContentView: View {
             } addPage: {
 //                let newPage = Page(elements: [Element(name: "String", position: CGPoint(x:120, y:200), isActive: true)])
                 var elementArray: [Element] = []
-                let newElement = Element(name: "String", isActive: true)
+                let newElement = Element(name: "String", x: 120, y: 120, isActive: true)
                 elementArray.append(newElement)
                 let newPage = Page(elements: elementArray)
 //                let newPage = Page(elements: newElement])
@@ -63,7 +63,7 @@ struct ContentView: View {
 //                } catch {
 //                    print("Failed to clear all Page data.")
 //                }
-//
+
 //                
                 withAnimation {
                     navigationPath.append(newPage)
@@ -80,5 +80,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .frame(minWidth: 500, minHeight: 500)
-        .modelContainer(previewContainer)
+        .modelContainer(for: [Page.self, Element.self])
 }

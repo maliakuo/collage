@@ -23,7 +23,7 @@ struct PageEditorView: View {
                         .focused($focusedField, equals: .front)
                 }
                 .padding()
-                .background(Color.cardBack, in: .rect(
+                .background(Color.cardFront, in: .rect(
                     bottomLeadingRadius: Design.cardCornerRadius,
                     bottomTrailingRadius: Design.cardCornerRadius))
 
