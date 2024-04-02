@@ -37,7 +37,7 @@ struct PageEditorView: View {
                     .padding()
             }
         }
-        .backgroundStyle(Color.cardFront)
+//        .backgroundStyle(Color.cardFront)
         .defaultFocus($focusedField, .front)
         .padding(.horizontal, Design.carouselCardHorizontalPadding)
     }

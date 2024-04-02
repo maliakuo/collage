@@ -21,9 +21,8 @@
 		458CFB1E2BACB6F800A2CC32 /* PageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB1D2BACB6F800A2CC32 /* PageGallery.swift */; };
 		458CFB202BACB7A400A2CC32 /* PageGalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB1F2BACB7A400A2CC32 /* PageGalleryItem.swift */; };
 		458CFB222BACB7D600A2CC32 /* PageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB212BACB7D600A2CC32 /* PageCarousel.swift */; };
-		458CFB242BACB8B400A2CC32 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB232BACB8B400A2CC32 /* PageView.swift */; };
 		458CFB262BACBBBE00A2CC32 /* EditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB252BACBBBE00A2CC32 /* EditorToolbar.swift */; };
-		458CFB282BACC32300A2CC32 /* CardReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB272BACC32300A2CC32 /* CardReaderView.swift */; };
+		458CFB282BACC32300A2CC32 /* PageReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB272BACC32300A2CC32 /* PageReaderView.swift */; };
 		458CFB2A2BACC35E00A2CC32 /* HorizontalFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB292BACC35E00A2CC32 /* HorizontalFlip.swift */; };
 		458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */; };
 		458CFB2E2BACC3CE00A2CC32 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */; };
@@ -66,9 +65,8 @@
 		458CFB1D2BACB6F800A2CC32 /* PageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageGallery.swift; sourceTree = "<group>"; };
 		458CFB1F2BACB7A400A2CC32 /* PageGalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageGalleryItem.swift; sourceTree = "<group>"; };
 		458CFB212BACB7D600A2CC32 /* PageCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCarousel.swift; sourceTree = "<group>"; };
-		458CFB232BACB8B400A2CC32 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		458CFB252BACBBBE00A2CC32 /* EditorToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbar.swift; sourceTree = "<group>"; };
-		458CFB272BACC32300A2CC32 /* CardReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReaderView.swift; sourceTree = "<group>"; };
+		458CFB272BACC32300A2CC32 /* PageReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageReaderView.swift; sourceTree = "<group>"; };
 		458CFB292BACC35E00A2CC32 /* HorizontalFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFlip.swift; sourceTree = "<group>"; };
 		458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
@@ -179,8 +177,7 @@
 				458CFB1D2BACB6F800A2CC32 /* PageGallery.swift */,
 				458CFB1F2BACB7A400A2CC32 /* PageGalleryItem.swift */,
 				458CFB252BACBBBE00A2CC32 /* EditorToolbar.swift */,
-				458CFB232BACB8B400A2CC32 /* PageView.swift */,
-				458CFB272BACC32300A2CC32 /* CardReaderView.swift */,
+				458CFB272BACC32300A2CC32 /* PageReaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,7 +325,7 @@
 				458CFB2E2BACC3CE00A2CC32 /* PreviewSampleData.swift in Sources */,
 				458CFB262BACBBBE00A2CC32 /* EditorToolbar.swift in Sources */,
 				458CFAE82BAB586300A2CC32 /* ContentView.swift in Sources */,
-				458CFB282BACC32300A2CC32 /* CardReaderView.swift in Sources */,
+				458CFB282BACC32300A2CC32 /* PageReaderView.swift in Sources */,
 				458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */,
 				458CFB1E2BACB6F800A2CC32 /* PageGallery.swift in Sources */,
 				458CFB1C2BACB64C00A2CC32 /* PageContainerView.swift in Sources */,
@@ -338,7 +335,6 @@
 				458CFB1A2BACB5D200A2CC32 /* Design.swift in Sources */,
 				458CFB152BACB30D00A2CC32 /* Page.swift in Sources */,
 				458CFB2A2BACC35E00A2CC32 /* HorizontalFlip.swift in Sources */,
-				458CFB242BACB8B400A2CC32 /* PageView.swift in Sources */,
 				458CFAE62BAB586300A2CC32 /* collageApp.swift in Sources */,
 				458CFB202BACB7A400A2CC32 /* PageGalleryItem.swift in Sources */,
 			);

@@ -57,14 +57,14 @@ struct ContentView: View {
 //                let newPage = Page(elements: newElement])
                 
                 modelContext.insert(newPage)
-                
+//                
 //                do {
 //                    try modelContext.delete(model: Page.self)
 //                } catch {
 //                    print("Failed to clear all Page data.")
 //                }
-
-                
+//
+//                
                 withAnimation {
                     navigationPath.append(newPage)
                     editing = true

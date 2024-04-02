@@ -30,8 +30,7 @@ struct PageCarousel: View {
                             if editing {
                                 PageEditorView(page: page)
                             } else {
-                                FlashCardView(page: page)
-                                    .id(page.id)
+                                PageReaderView(color: .cardFront, text: page.elements[0].name)
                             }
                         }
                         .containerRelativeFrame(.horizontal) { width, _ in
@@ -46,7 +45,7 @@ struct PageCarousel: View {
             .scrollPosition(id: $selectedPageID)
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.paging)
-            Text("Swipe left/right to review other cards")
+            Text("Swipe left/right to review other pages")
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)

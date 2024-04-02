@@ -38,12 +38,12 @@ import SwiftUI
 //    }
 //}
 
-//extension CGPoint : Hashable {
-//  public func hash(into hasher: inout Hasher) {
-//    hasher.combine(x)
-//    hasher.combine(y)
-//  }
-//}
+extension CGPoint: Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(x)
+    hasher.combine(y)
+  }
+}
 //
 // creating a new class of elements
 @Model
@@ -52,14 +52,9 @@ final class Element {
 //    var position: CGPoint
     var isActive: Bool
     
-    // initializing the location of an element to always be this random set of coordinates
-//    init(name: String, position: CGPoint, isActive: Bool) {
-//        self.name = name
-//        self.position = position
-//        self.isActive = isActive
-//    }
     init(name: String, isActive: Bool) {
         self.name = name
+//        self.position = position
         self.isActive = isActive
     }
 }
@@ -88,6 +83,7 @@ extension Element: Hashable {
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
+//        hasher.combine(CGPoint)
         hasher.combine(isActive)
     }
 }
