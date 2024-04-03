@@ -14,13 +14,16 @@ import SwiftUI
 struct PageEditorView: View {
     @Bindable var page: Page
     @FocusState private var focusedField: FocusedField?
-
+    
     var body: some View {
         PageContainerView {
             VStack(spacing: 0) {
                 LabeledContent("Front") {
-                    TextField("Front Text", text: $page.elements[0].name)
-                        .focused($focusedField, equals: .front)
+
+                    ForEach(page.elements.indices) { idx in
+                        TextField("Field \(idx)", text: $page.elements[idx].name)
+                        }
+                    
                 }
                 .padding()
                 .background(Color.cardFront, in: .rect(

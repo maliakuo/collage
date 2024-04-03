@@ -65,20 +65,6 @@ final class Element {
 
 extension Element: Identifiable { }
 
-//extension Element: Hashable {
-//    static func == (lhs: Element, rhs: Element) -> Bool {
-//        lhs.name == rhs.name &&
-//        lhs.position == rhs.position &&
-//        lhs.isActive == rhs.isActive
-//    }
-//
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(name)
-//        hasher.combine(position)
-//        hasher.combine(isActive)
-//    }
-//}
-
 extension Element: Hashable {
     static func == (lhs: Element, rhs: Element) -> Bool {
         lhs.name == rhs.name &&
