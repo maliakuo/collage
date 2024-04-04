@@ -30,7 +30,8 @@ struct PageCarousel: View {
                             if editing {
                                 PageEditorView(page: page)
                             } else {
-                                PageReaderView(color: .cardFront, text: page.elements[0].name)
+//                                PageReaderView(color: .cardFront, text: page.elements[0].name)
+                                PageReadingView(page: page)
                             }
                         }
                         .containerRelativeFrame(.horizontal) { width, _ in

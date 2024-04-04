@@ -27,6 +27,7 @@
 		458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */; };
 		458CFB2E2BACC3CE00A2CC32 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */; };
 		458CFB322BB3293800A2CC32 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB312BB3293800A2CC32 /* Tools.swift */; };
+		45EAAF0E2BBE3033005D4CBF /* PageReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EAAF0D2BBE3033005D4CBF /* PageReadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
 		458CFB312BB3293800A2CC32 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		45EAAF0D2BBE3033005D4CBF /* PageReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageReadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				458CFB212BACB7D600A2CC32 /* PageCarousel.swift */,
 				458CFB1B2BACB64C00A2CC32 /* PageContainerView.swift */,
 				458CFB162BACB52500A2CC32 /* PageEditorView.swift */,
+				45EAAF0D2BBE3033005D4CBF /* PageReadingView.swift */,
 				458CFB272BACC32300A2CC32 /* PageReaderView.swift */,
 				458CFB1D2BACB6F800A2CC32 /* PageGallery.swift */,
 				458CFB1F2BACB7A400A2CC32 /* PageGalleryItem.swift */,
@@ -324,6 +327,7 @@
 			files = (
 				458CFB2E2BACC3CE00A2CC32 /* PreviewSampleData.swift in Sources */,
 				458CFB262BACBBBE00A2CC32 /* EditorToolbar.swift in Sources */,
+				45EAAF0E2BBE3033005D4CBF /* PageReadingView.swift in Sources */,
 				458CFAE82BAB586300A2CC32 /* ContentView.swift in Sources */,
 				458CFB282BACC32300A2CC32 /* PageReaderView.swift in Sources */,
 				458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */,
