@@ -18,7 +18,7 @@
 import SwiftUI
 
 struct PageReadingView: View {
-    @Bindable var page: Page
+    var page: Page
     var displaysCode: Bool = false
 
     var body: some View {

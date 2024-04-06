@@ -21,7 +21,8 @@ struct PageEditorView: View {
                 LabeledContent("Front") {
 
                     ForEach(page.elements.indices) { idx in
-                        TextField("Field \(idx)", text: $page.elements[idx].name)
+                        DraggableElementView(page: page, idx: idx)
+//                        TextField("Field \(idx)", text: $page.elements[idx].name)
                         }
                     
                 }
