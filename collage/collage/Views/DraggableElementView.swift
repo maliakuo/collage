@@ -87,10 +87,14 @@ struct DraggableElementView:View{
             .onChanged { value in
                 self.location = value.location
                 self.isDragging = true
+                print(self.location.x)
+                print(self.location.y)
             }
         
             .onEnded { _ in
                 self.isDragging = false
+                page.elements[idx].x = self.location.x
+                page.elements[idx].y = self.location.y
             }
     }
     
