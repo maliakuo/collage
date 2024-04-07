@@ -50,12 +50,12 @@ extension CGPoint: Hashable {
 @Model
 final class Element {
     var name: String = ""
-    var x: Double = 120
-    var y: Double = 120
+    var x: CGFloat = 120
+    var y: CGFloat = 120
 //    var position: CGPoint
     var isActive: Bool = false
     
-    init(name: String, x: Double, y: Double, isActive: Bool) {
+    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool) {
         self.name = name
 //        self.position = position
         self.x = x

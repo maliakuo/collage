@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import CoreGraphics
 
 struct ContentView: View {
     @Query private var pages: [Page]

@@ -22,6 +22,7 @@
 //}
 
 import SwiftUI
+import CoreGraphics
 
 struct SampleDeck {
     static var contents: [Page] = [

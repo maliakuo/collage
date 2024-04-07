@@ -21,11 +21,14 @@ struct PageEditorView: View {
                 LabeledContent("Front") {
 
                     ForEach(page.elements.indices) { idx in
+//                        DraggableElementView(page: page, idx: idx, isDragging: false, location: CGPoint(x: page.elements[idx].x, y: page.elements[idx].y))
                         DraggableElementView(page: page, idx: idx)
 //                        TextField("Field \(idx)", text: $page.elements[idx].name)
+//                            .frame(width: 120, height: 120)
                         }
                     
                 }
+                .frame(width: 600, height: 750)
                 .padding()
                 .background(Color.cardFront, in: .rect(
                     bottomLeadingRadius: Design.cardCornerRadius,

@@ -32,6 +32,7 @@ struct PageReadingView: View {
                         .padding()
                     }
             }
+            .frame(width: 600, height: 750)
         }
         .backgroundStyle(Color.cardFront)
     }

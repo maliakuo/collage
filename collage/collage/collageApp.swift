@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import CoreGraphics
 
 @main
 struct collageApp: App {
