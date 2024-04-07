@@ -73,15 +73,36 @@ struct DraggableElementView:View{
 //                self.isDragging = false
 //            }
 //    }
+    @State private var isDragging:Bool = false
+    @State private var location:CGPoint
+        
+    init(page: Page, idx: Int, location: CGPoint) {
+        self.page = page
+        self.idx = idx
+        self.location = location
+    }
+    
+    var dragGesture: some Gesture{
+        DragGesture()
+            .onChanged { value in
+                self.location = value.location
+                self.isDragging = true
+            }
+        
+            .onEnded { _ in
+                self.isDragging = false
+            }
+    }
     
     var body: some View{
         ZStack {
             Rectangle()
                 .fill(.orange)
             TextField("Field \(idx)", text: $page.elements[idx].name)
-//                .position(location)
-//                .gesture(dragGesture)
+                
         }
+        .position(location)
+        .gesture(dragGesture)
         .frame(width: 120, height: 120)
     }
 }

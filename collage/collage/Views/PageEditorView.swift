@@ -22,7 +22,7 @@ struct PageEditorView: View {
 
                     ForEach(page.elements.indices) { idx in
 //                        DraggableElementView(page: page, idx: idx, isDragging: false, location: CGPoint(x: page.elements[idx].x, y: page.elements[idx].y))
-                        DraggableElementView(page: page, idx: idx)
+                        DraggableElementView(page: page, idx: idx, location:CGPoint(x:120, y:200))
 //                        TextField("Field \(idx)", text: $page.elements[idx].name)
 //                            .frame(width: 120, height: 120)
                         }
