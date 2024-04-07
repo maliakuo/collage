@@ -25,12 +25,22 @@ struct PageReadingView: View {
         PageContainerView {
             VStack {
                 ForEach(page.elements) { element in
-                    Text(element.name)
-                        .font(Design.cardViewingFont)
-                        .multilineTextAlignment(.center)
-                        .minimumScaleFactor(0.33)
-                        .padding()
+                    //                    Text(element.name)
+                    //                        .font(Design.cardViewingFont)
+                    //                        .multilineTextAlignment(.center)
+                    //                        .minimumScaleFactor(0.33)
+                    //                        .padding()
+                    //                    }
+                    
+                    ZStack {
+                        Rectangle()
+                            .fill(.orange)
+                        Text(element.name)
+                        
                     }
+                    .position(CGPoint(x: element.x, y: element.y))
+                    .frame(width: 120, height: 120)
+                }
             }
             .frame(width: 600, height: 750)
         }
