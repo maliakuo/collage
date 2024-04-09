@@ -11,6 +11,7 @@ import SwiftUI
 import CoreGraphics
 
 struct DraggableElementView:View{
+    @Environment(\.modelContext) private var modelContext
     @Bindable var page: Page
     var idx: Int
 
@@ -34,6 +35,12 @@ struct DraggableElementView:View{
                 self.isDragging = false
                 page.elements[idx].x = self.location.x
                 page.elements[idx].y = self.location.y
+                do {
+                    try modelContext.save()
+                    print("saved it")
+                } catch {
+                    print("Failed to save Page.")
+                }
             }
     }
     
@@ -44,6 +51,7 @@ struct DraggableElementView:View{
             TextField("Field \(idx)", text: $page.elements[idx].name)
                 
         }
+        .animation(.easeInOut)
         .position(location)
         .gesture(dragGesture)
         .frame(width: 120, height: 120)

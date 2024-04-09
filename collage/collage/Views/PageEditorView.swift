@@ -12,25 +12,25 @@
 import SwiftUI
 
 struct PageEditorView: View {
+    @Environment(\.modelContext) private var modelContext
     @Bindable var page: Page
     @FocusState private var focusedField: FocusedField?
+    @State private var bold = false
+    @State private var italic = false
     
     var body: some View {
         PageContainerView {
             VStack(spacing: 0) {
                 LabeledContent("Front") {
-
-                    ForEach(page.elements.indices) { idx in
+                    ForEach(page.elements.indices, id: \.self) { idx in
                         DraggableElementView(page: page, idx: idx, location:CGPoint(x:page.elements[idx].x, y:page.elements[idx].y))
-                        }
-                    
+                    }
                 }
                 .frame(width: 600, height: 750)
                 .padding()
                 .background(Color.cardFront, in: .rect(
                     bottomLeadingRadius: Design.cardCornerRadius,
                     bottomTrailingRadius: Design.cardCornerRadius))
-
             }
             .labeledContentStyle(PageFieldLabeledContentStyle())
             .textFieldStyle(.squareBorder)
@@ -44,6 +44,26 @@ struct PageEditorView: View {
 //        .backgroundStyle(Color.cardFront)
         .defaultFocus($focusedField, .front)
         .padding(.horizontal, Design.carouselCardHorizontalPadding)
+        .toolbar {
+            ToolbarItemGroup {
+                Button("Text") {
+                    print("pressed")
+                    let newElement2 = Element(name: "new text", x: 200, y: 200, isActive: false)
+                    page.elements.append(newElement2)
+                    do {
+                        try modelContext.save()
+                    } catch {
+                        print("Failed to save Page.")
+                    }
+                }
+                Toggle(isOn: $bold) {
+                    Image(systemName: "bold")
+                }
+                Toggle(isOn: $italic) {
+                    Image(systemName: "italic")
+                }
+            }
+        }
     }
 }
 
