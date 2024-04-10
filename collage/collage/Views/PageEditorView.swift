@@ -48,7 +48,7 @@ struct PageEditorView: View {
             ToolbarItemGroup {
                 Button("Text") {
                     print("pressed")
-                    page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false, bold: false, italic: false))
+                    page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false, bold: false, italic: false, fx: 120, fy: 120))
                     do {
                         try modelContext.save()
                         print("saved it")

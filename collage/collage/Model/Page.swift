@@ -59,13 +59,18 @@ final class Element {
     var bold: Bool = false
     var italic: Bool = false
     
-    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool, bold: Bool, italic: Bool) {
+    var fx: CGFloat = 120
+    var fy: CGFloat = 120
+    
+    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool, bold: Bool, italic: Bool, fx: CGFloat, fy: CGFloat) {
         self.name = name
         self.x = x
         self.y = y
         self.isActive = isActive
         self.bold = bold
         self.italic = italic
+        self.fx = fx
+        self.fy = fy
     }
     
 //    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool) {

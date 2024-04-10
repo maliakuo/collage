@@ -38,7 +38,7 @@ struct PageReadingView: View {
                         
                     }
                     .position(CGPoint(x: element.x, y: element.y))
-                    .frame(width: 120, height: 120)
+                    .frame(width: element.fx, height: element.fy)
                 }
             }
             .frame(width: 600)

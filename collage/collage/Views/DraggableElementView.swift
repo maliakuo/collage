@@ -88,11 +88,25 @@ struct DraggableElementView:View{
             }){
             Text("Italics")
             }
+            
+            Button(action: {
+                page.elements[idx].fx = page.elements[idx].fx * 2
+                page.elements[idx].fy = page.elements[idx].fy * 2
+            }){
+            Text("2x")
+            }
+            
+            Button(action: {
+                page.elements[idx].fx = page.elements[idx].fx / 2
+                page.elements[idx].fy = page.elements[idx].fy / 2
+            }){
+            Text("0.5x")
+            }
        }
         .animation(.easeInOut)
         .position(location)
         .gesture(dragGesture)
-        .frame(width: 120, height: 120)
+        .frame(width: page.elements[idx].fx, height: page.elements[idx].fy)
         
     }
 }
