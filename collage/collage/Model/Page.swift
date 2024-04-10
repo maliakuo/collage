@@ -125,11 +125,13 @@ extension Page: Identifiable { }
 
 extension Page: Hashable {
     static func == (lhs: Page, rhs: Page) -> Bool {
+        lhs.id == rhs.id &&
         lhs.elements == rhs.elements &&
         lhs.creationDate == rhs.creationDate
     }
 
     func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
         hasher.combine(elements)
         hasher.combine(creationDate)
     }

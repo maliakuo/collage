@@ -27,7 +27,7 @@ struct PageReadingView: View {
                 ForEach(page.elements) { element in
                     ZStack {
                         Rectangle()
-                            .fill(.orange)
+                            .fill(.clear)
                         Text(element.name)
                             .font(Design.cardViewingFont)
                             .multilineTextAlignment(.center)

@@ -65,7 +65,8 @@ struct DraggableElementView:View{
     var body: some View{
         ZStack {
             Rectangle()
-                .fill(.orange)
+                .fill(Color.cardFront)
+                .border(.blue)
             TextField("Field \(idx)", text: $page.elements[idx].name)
                 .font(Design.cardViewingFont)
                 .multilineTextAlignment(.center)
