@@ -21,30 +21,15 @@ struct PageEditorView: View {
     var body: some View {
         PageContainerView {
             ZStack {
-//                LabeledContent("Front") {
                     ForEach(page.elements.indices, id: \.self) { idx in
                         DraggableElementView(page: page, idx: idx, location:CGPoint(x:page.elements[idx].x, y:page.elements[idx].y))
                     }
-//                }
-//                .frame(width: 600, height: 400)
-//                .padding()
-//                .background(Color.cardFront, in: .rect(
-//                    bottomLeadingRadius: Design.cardCornerRadius,
-//                    bottomTrailingRadius: Design.cardCornerRadius))
             }
             .background(Color.cardFront, in: .rect(
                 bottomLeadingRadius: Design.cardCornerRadius,
                 bottomTrailingRadius: Design.cardCornerRadius))
             .frame(width: 600)
-            
-//            .labeledContentStyle(PageFieldLabeledContentStyle())
             .textFieldStyle(.squareBorder)
-//            .overlay(alignment: .topTrailing) {
-//                Text("Created at \(page.creationDate, format: .dateTime)")
-//                    .foregroundStyle(.secondary)
-//                    .font(.footnote)
-//                    .padding()
-//            }
         }
         .backgroundStyle(Color.cardFront)
         .defaultFocus($focusedField, .front)
@@ -53,8 +38,13 @@ struct PageEditorView: View {
             ToolbarItemGroup {
                 Button("Text") {
                     print("pressed")
-                    let newElement = Element(name: "new text", x: 200, y: 200, isActive: false)
-                    page.elements.append(newElement)
+//                    var currentElementArray = page.elements
+//                    var newElement = Element(name: "new text", x: 200, y: 200, isActive: false)
+//                    currentElementArray.append(newElement)
+////                    page.elements.removeAll()
+//                    
+//                    page.elements = currentElementArray
+                    page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false))
                     do {
                         try modelContext.save()
                         print("saved it")

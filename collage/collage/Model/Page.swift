@@ -49,6 +49,7 @@ extension CGPoint: Hashable {
 // creating a new class of elements
 @Model
 final class Element {
+    let id = UUID()
     var name: String = ""
     var x: CGFloat = 120
     var y: CGFloat = 120
@@ -68,6 +69,7 @@ extension Element: Identifiable { }
 
 extension Element: Hashable {
     static func == (lhs: Element, rhs: Element) -> Bool {
+        lhs.id == rhs.id &&
         lhs.name == rhs.name &&
         lhs.x == rhs.x &&
         lhs.y == rhs.y &&
@@ -75,6 +77,7 @@ extension Element: Hashable {
     }
 
     func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
         hasher.combine(name)
         hasher.combine(x)
         hasher.combine(y)
@@ -108,6 +111,7 @@ extension Element: Hashable {
 
 @Model
 final class Page {
+    let id = UUID()
     var creationDate: Date
     var elements: [Element]
 
