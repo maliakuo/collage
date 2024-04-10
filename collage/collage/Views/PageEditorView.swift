@@ -23,7 +23,17 @@ struct PageEditorView: View {
             ZStack {
                     ForEach(page.elements.indices, id: \.self) { idx in
                         DraggableElementView(page: page, idx: idx, location:CGPoint(x:page.elements[idx].x, y:page.elements[idx].y))
+//                            .contextMenu {
+//                              Button(action: {
+//                                  page.elements.remove(at: idx)
+//                                  try? modelContext.save()
+//                                  print("oops delete attempt")
+//                              }){
+//                              Text("Delete")
+//                              }
+//                           }
                     }
+
             }
             .background(Color.cardFront, in: .rect(
                 bottomLeadingRadius: Design.cardCornerRadius,
@@ -38,13 +48,7 @@ struct PageEditorView: View {
             ToolbarItemGroup {
                 Button("Text") {
                     print("pressed")
-//                    var currentElementArray = page.elements
-//                    var newElement = Element(name: "new text", x: 200, y: 200, isActive: false)
-//                    currentElementArray.append(newElement)
-////                    page.elements.removeAll()
-//                    
-//                    page.elements = currentElementArray
-                    page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false))
+                    page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false, bold: false, italic: false))
                     do {
                         try modelContext.save()
                         print("saved it")

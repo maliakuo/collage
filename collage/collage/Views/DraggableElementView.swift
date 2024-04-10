@@ -68,16 +68,32 @@ struct DraggableElementView:View{
                 .fill(Color.cardFront)
                 .border(.blue)
             TextField("Field \(idx)", text: $page.elements[idx].name)
+                .bold(page.elements[idx].bold)
+                .italic(page.elements[idx].italic)
                 .font(Design.cardViewingFont)
                 .multilineTextAlignment(.center)
                 .padding(2)
                 .background(.fill.quaternary, in: .rect(cornerRadius: 4))
                 
         }
+        .contextMenu {
+            Button(action: {
+                page.elements[idx].bold = !page.elements[idx].bold
+            }){
+                Text("Bold")
+            }
+            
+            Button(action: {
+                page.elements[idx].italic = !page.elements[idx].italic
+            }){
+            Text("Italics")
+            }
+       }
         .animation(.easeInOut)
         .position(location)
         .gesture(dragGesture)
         .frame(width: 120, height: 120)
+        
     }
 }
 

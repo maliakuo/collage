@@ -38,13 +38,13 @@ import SwiftUI
 //        hasher.combine(creationDate)
 //    }
 //}
-
-extension CGPoint: Hashable {
-  public func hash(into hasher: inout Hasher) {
-    hasher.combine(x)
-    hasher.combine(y)
-  }
-}
+//
+//extension CGPoint: Hashable {
+//  public func hash(into hasher: inout Hasher) {
+//    hasher.combine(x)
+//    hasher.combine(y)
+//  }
+//}
 //
 // creating a new class of elements
 @Model
@@ -56,13 +56,25 @@ final class Element {
 //    var position: CGPoint
     var isActive: Bool = false
     
-    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool) {
+    var bold: Bool = false
+    var italic: Bool = false
+    
+    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool, bold: Bool, italic: Bool) {
         self.name = name
-//        self.position = position
         self.x = x
         self.y = y
         self.isActive = isActive
+        self.bold = bold
+        self.italic = italic
     }
+    
+//    init(name: String, x: CGFloat, y: CGFloat, isActive: Bool) {
+//        self.name = name
+////        self.position = position
+//        self.x = x
+//        self.y = y
+//        self.isActive = isActive
+//    }
 }
 
 extension Element: Identifiable { }

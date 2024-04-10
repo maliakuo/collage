@@ -22,8 +22,8 @@ struct ContentView: View {
             } addPage: {
 //                let newPage = Page(elements: [Element(name: "String", position: CGPoint(x:120, y:200), isActive: true)])
                 var elementArray: [Element] = []
-                let newElement = Element(name: "here", x: 120, y: 120, isActive: true)
-                let newElement2 = Element(name: "second", x: 200, y: 300, isActive: false)
+                let newElement = Element(name: "here", x: 120, y: 120, isActive: true, bold: false, italic: false)
+//                let newElement2 = Element(name: "second", x: 200, y: 300, isActive: false)
                 elementArray.append(newElement)
 //                elementArray.append(newElement2)
                 let newPage = Page(elements: elementArray)

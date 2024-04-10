@@ -20,7 +20,7 @@ import SwiftUI
 struct PageReadingView: View {
     var page: Page
     var displaysCode: Bool = false
-
+    
     var body: some View {
         PageContainerView {
             ZStack {
@@ -29,6 +29,8 @@ struct PageReadingView: View {
                         Rectangle()
                             .fill(.clear)
                         Text(element.name)
+                            .bold(element.bold)
+                            .italic(element.italic)
                             .font(Design.cardViewingFont)
                             .multilineTextAlignment(.center)
                             .minimumScaleFactor(0.33)
