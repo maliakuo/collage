@@ -26,7 +26,6 @@
 		458CFB2A2BACC35E00A2CC32 /* HorizontalFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB292BACC35E00A2CC32 /* HorizontalFlip.swift */; };
 		458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */; };
 		458CFB2E2BACC3CE00A2CC32 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */; };
-		458CFB322BB3293800A2CC32 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CFB312BB3293800A2CC32 /* Tools.swift */; };
 		45EAAF0E2BBE3033005D4CBF /* PageReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EAAF0D2BBE3033005D4CBF /* PageReadingView.swift */; };
 		45EAAF102BC06DA8005D4CBF /* DraggableElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EAAF0F2BC06DA8005D4CBF /* DraggableElementView.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,6 @@
 		458CFB292BACC35E00A2CC32 /* HorizontalFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFlip.swift; sourceTree = "<group>"; };
 		458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		458CFB2D2BACC3CE00A2CC32 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
-		458CFB312BB3293800A2CC32 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		45EAAF0D2BBE3033005D4CBF /* PageReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageReadingView.swift; sourceTree = "<group>"; };
 		45EAAF0F2BC06DA8005D4CBF /* DraggableElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableElementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				458CFB142BACB30D00A2CC32 /* Page.swift */,
-				458CFB312BB3293800A2CC32 /* Tools.swift */,
 				458CFB2B2BACC38D00A2CC32 /* SampleDeck.swift */,
 			);
 			path = Model;
@@ -336,7 +333,6 @@
 				458CFB2C2BACC38D00A2CC32 /* SampleDeck.swift in Sources */,
 				458CFB1E2BACB6F800A2CC32 /* PageGallery.swift in Sources */,
 				458CFB1C2BACB64C00A2CC32 /* PageContainerView.swift in Sources */,
-				458CFB322BB3293800A2CC32 /* Tools.swift in Sources */,
 				458CFB172BACB52500A2CC32 /* PageEditorView.swift in Sources */,
 				458CFB222BACB7D600A2CC32 /* PageCarousel.swift in Sources */,
 				458CFB1A2BACB5D200A2CC32 /* Design.swift in Sources */,

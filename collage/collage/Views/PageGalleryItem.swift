@@ -22,6 +22,10 @@ struct PageGalleryItem<Content: View, S: ShapeStyle>: View {
                     .minimumScaleFactor(0.5)
                     .padding()
             }
+            .overlay( 
+                RoundedRectangle(cornerRadius: 7)
+                    .stroke(.pink, lineWidth: 1)
+            )
         }
         .backgroundStyle(backgroundStyle)
         .buttonStyle(Design.galleryButtonStyle)

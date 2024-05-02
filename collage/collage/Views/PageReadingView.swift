@@ -31,7 +31,7 @@ struct PageReadingView: View {
                         Text(element.name)
                             .bold(element.bold)
                             .italic(element.italic)
-                            .font(Design.cardViewingFont)
+                            .font(.system(size: 18, design: .monospaced))
                             .multilineTextAlignment(.center)
                             .minimumScaleFactor(0.33)
                             .padding()

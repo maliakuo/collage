@@ -15,23 +15,12 @@ struct PageEditorView: View {
     @Environment(\.modelContext) private var modelContext
     @Bindable var page: Page
     @FocusState private var focusedField: FocusedField?
-    @State private var bold = false
-    @State private var italic = false
     
     var body: some View {
         PageContainerView {
             ZStack {
                     ForEach(page.elements.indices, id: \.self) { idx in
                         DraggableElementView(page: page, idx: idx, location:CGPoint(x:page.elements[idx].x, y:page.elements[idx].y))
-//                            .contextMenu {
-//                              Button(action: {
-//                                  page.elements.remove(at: idx)
-//                                  try? modelContext.save()
-//                                  print("oops delete attempt")
-//                              }){
-//                              Text("Delete")
-//                              }
-//                           }
                     }
 
             }
@@ -47,20 +36,12 @@ struct PageEditorView: View {
         .toolbar {
             ToolbarItemGroup {
                 Button("Text") {
-                    print("pressed")
                     page.elements.append(Element(name: "new text", x: 200, y: 200, isActive: false, bold: false, italic: false, fx: 120, fy: 120))
                     do {
                         try modelContext.save()
-                        print("saved it")
                     } catch {
                         print("Failed to save Page.")
                     }
-                }
-                Toggle(isOn: $bold) {
-                    Image(systemName: "bold")
-                }
-                Toggle(isOn: $italic) {
-                    Image(systemName: "italic")
                 }
             }
         }

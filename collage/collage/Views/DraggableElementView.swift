@@ -28,8 +28,6 @@ struct DraggableElementView:View{
         DragGesture()
             .onChanged { value in
                 self.location = value.location
-                print("x is ", self.location.x)
-                print("y is ", self.location.y)
                 self.isDragging = true
             }
         
@@ -55,7 +53,6 @@ struct DraggableElementView:View{
                 page.elements[idx].y = self.location.y
                 do {
                     try modelContext.save()
-                    print("saved locations")
                 } catch {
                     print("Failed to save Page.")
                 }
@@ -68,13 +65,13 @@ struct DraggableElementView:View{
                 .fill(Color.cardFront)
                 .border(.blue)
             TextField("Field \(idx)", text: $page.elements[idx].name)
+                .padding(.horizontal)
                 .bold(page.elements[idx].bold)
                 .italic(page.elements[idx].italic)
-                .font(Design.cardViewingFont)
+                .font(.system(size: 18, design: .monospaced))
                 .multilineTextAlignment(.center)
                 .padding(2)
                 .background(.fill.quaternary, in: .rect(cornerRadius: 4))
-                
         }
         .contextMenu {
             Button(action: {
@@ -110,4 +107,3 @@ struct DraggableElementView:View{
         
     }
 }
-

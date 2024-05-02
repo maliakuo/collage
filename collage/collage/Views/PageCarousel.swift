@@ -25,12 +25,11 @@ struct PageCarousel: View {
         VStack {
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0) {
-                    ForEach(pages) { page in
+                    ForEach(pages.reversed()) { page in
                         Group {
                             if editing {
                                 PageEditorView(page: page)
                             } else {
-//                                PageReaderView(color: .cardFront, text: page.elements[0].name)
                                 PageReadingView(page: page)
                             }
                         }

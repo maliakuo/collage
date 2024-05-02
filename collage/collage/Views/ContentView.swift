@@ -20,24 +20,13 @@ struct ContentView: View {
             PageGallery(pages: pages, editing: $editing) { page in
                 withAnimation { navigationPath.append(page) }
             } addPage: {
-//                let newPage = Page(elements: [Element(name: "String", position: CGPoint(x:120, y:200), isActive: true)])
                 var elementArray: [Element] = []
-                let newElement = Element(name: "here", x: 120, y: 120, isActive: true, bold: false, italic: false, fx: 120, fy: 120)
-//                let newElement2 = Element(name: "second", x: 200, y: 300, isActive: false)
+                let newElement = Element(name: dateConverter(date: Date()), x: 120, y: 120, isActive: true, bold: false, italic: false, fx: 120, fy: 120)
                 elementArray.append(newElement)
-//                elementArray.append(newElement2)
                 let newPage = Page(elements: elementArray)
-//                let newPage = Page(elements: newElement])
                 
                 modelContext.insert(newPage)
-//                
-//                do {
-//                    try modelContext.delete(model: Page.self)
-//                } catch {
-//                    print("Failed to clear all Page data.")
-//                }
 
-//                
                 withAnimation {
                     navigationPath.append(newPage)
                     editing = true
@@ -47,6 +36,13 @@ struct ContentView: View {
             .padding()
             .toolbar { EditorToolbar(isEnabled: false, editing: $editing) }
         }
+    }
+    
+    
+    func dateConverter(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMM y"
+        return dateFormatter.string(from: date)
     }
 }
 
